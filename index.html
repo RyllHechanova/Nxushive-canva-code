@@ -5074,5 +5074,12 @@ showPage(PAGES.includes(initial) ? initial : 'home', { push: false });
 });
 })();
 </script>
+  <script>
+window.parent.postMessage({
+  type: 'resize-iframe',
+  height: document.body.scrollHeight
+}, '*');
+</script>
 </body>
 </html>
+
